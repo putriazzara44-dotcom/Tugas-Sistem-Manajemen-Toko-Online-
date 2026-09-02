@@ -126,7 +126,9 @@ void main() async {
   try {
     var p1 = await toko.cariProduk('Flutter');
     print(p1.deskripsi());
-    print('Harga setelah diskon 20%: Rp ${eBook.hitungDiskon(eBook.harga, 20)}');
+    print(
+      'Harga setelah diskon 20%: Rp ${eBook.hitungDiskon(eBook.harga, 20)}',
+    );
     keranjang.tambah(p1);
   } catch (e) {
     print('Error: $e');
@@ -141,8 +143,8 @@ void main() async {
 
   try {
     await toko.cariProduk('Laptop');
-    } catch (e) {
-       print('Error: $e');
+  } catch (e) {
+    print('Error: $e');
   }
 
   try {
